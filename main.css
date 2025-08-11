@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #f2fef2fe;
+}
+
+body {
+    background-image: linear-gradient(89.9deg, rgba(238,3,3,1) 0%, rgba(0,22,145,1) 99.8%);
+    overflow-x: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 0.2rem;
+    font-size: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    width: 100vw;
+    gap: 1rem;
+    margin-top: 6rem;
+}
+
+nav img {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: transparent; /* 'none' valid nahi hota */
+    color: #fafafa;
+    font-size: 14px;
+    cursor: pointer;
+    width: 15rem;
+}
+
+/* Button & File upload button styling */
+button,
+input[type="file"]::-webkit-file-upload-button {
+    background: linear-gradient(to right, #ff0084, #33001b);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 19px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover,
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+div {
+    display: flex;
+    justify-content: center; /* X-axis center */
+    align-items: center;     /* Y-axis center (optional) */
+    height: 100px; /* Optional for vertical center */
+}
+
+#sec_head {
+    font-size: 2rem;
+    width: 10rem;
+    background: #00ffaa;
+    border-radius: 25px;
+    padding: 5px 8px;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.pics_cntr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.pics_cntr img, .pics_cntr div{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    transition: transform 0.5s ease;
+}
+
+.pics_cntr img:hover{
+    cursor: pointer;
+    box-shadow: 0 0 50px #ff00b3;
+    transform: scale(1.05);
+}
+
+#sec_head:hover {
+    transform: scale(1.2);
+}
+
+
+
+footer {
+    background-color: #111; /* Dark footer background */
+    color: white;           /* White text */
+    text-align: center;     /* Center text horizontally */
+    padding: 1rem;          /* Space inside */
+    font-size: 0.9rem;      /* Slightly smaller text */
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    gap: 0.5rem;             /* Space between copyright & version */
+}
+
+
+/* Scrollbar ka size */
+::-webkit-scrollbar {
+  width: 8px;   /* vertical ke liye */
+  height: 12px;  /* horizontal ke liye */
+}
+
+/* Scrollbar ka track (background) */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Scrollbar ka thumb (move hone wala part) */
+::-webkit-scrollbar-thumb {
+  background-color: #660033;
+  border-radius: 10px;
+}
+
+/* Hover pe scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #ff5fa2, #660033);
+}
+
+
+/* Tablet */
+@media (min-width: 500px) and (max-width: 767px) {
+    nav {
+        flex-direction: row;
+    }
+    nav img {
+        width: 3rem;
+        height: 3rem;
+    }
+    .pics_cntr img, .pics_cntr div{
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    h1 {
+        left: 2rem;
+        transform: none;
+        display: inline;
+        top: 0.2rem;
+    }
+    nav {
+        margin-top: 0.2rem;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 0.8rem;
+    }
+    nav img {
+        position: static;
+        width: 4rem;
+        height: 4rem;
+    }
+    .pics_cntr img, .pics_cntr div{
+        width: 20rem;
+        height: 20rem;
+    }
+}
