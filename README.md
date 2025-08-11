@@ -35,7 +35,7 @@ It’s built using **HTML, CSS, and JavaScript**, and can be customized with you
 
 
 ## 🚀 Live Demo
-[Click here to try the website](https://memories-prteek.netlify.app/))  
+[Click here to try the website](https://memories-prteek.netlify.app/)  
 
 ---
 
